@@ -4,6 +4,10 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths:
+      - 'docs/**'
+      - 'workflows/**'
+      - '.github/workflows/pages-deploy.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,15 +25,76 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Build job - only runs if workflows changed
+  build:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.modified, 'workflows/') || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Create database directory
+        run: mkdir -p database
+
+      - name: Rebuild workflow database
+        run: |
+          echo "Indexing workflows..."
+          python workflow_db.py --index --force
+          echo "Database rebuild complete"
+
+      - name: Generate search index
+        run: |
+          if [ -f "scripts/generate_search_index.py" ]; then
+            echo "Generating search index..."
+            python scripts/generate_search_index.py
+          else
+            echo "Search index script not found, skipping..."
+          fi
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-build
+          path: docs/
+          retention-days: 1
+
+  # Deploy job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: [build]
+    if: always() && (needs.build.result == 'success' || needs.build.result == 'skipped')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Download build artifacts (if available)
+        if: needs.build.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-build
+          path: docs/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -43,3 +108,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deployment Summary
+        run: |
+          echo "✅ Deployment successful!"
+          echo "🌐 Site URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "📊 Workflows indexed: $(find workflows -name '*.json' | wc -l)"

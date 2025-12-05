@@ -11,7 +11,7 @@
 
 ### 🌟 The Ultimate Collection of n8n Automation Workflows
 
-**[🔍 Browse Online](https://zie619.github.io/n8n-workflows)** • **[📚 Documentation](#documentation)** • **[🤝 Contributing](#contributing)** • **[📄 License](#license)**
+**[🔍 Browse Online](https://jhparmar.github.io/n8n-workflows)** • **[📚 Documentation](#documentation)** • **[🤝 Contributing](#contributing)** • **[📄 License](#license)**
 
 </div>
 
@@ -22,7 +22,7 @@
 ### 🎉 Latest Updates (November 2025)
 - **🔒 Enhanced Security**: Full security audit completed, all CVEs resolved
 - **🐳 Docker Support**: Multi-platform builds for linux/amd64 and linux/arm64
-- **📊 GitHub Pages**: Live searchable interface at [zie619.github.io/n8n-workflows](https://zie619.github.io/n8n-workflows)
+- **📊 GitHub Pages**: Live searchable interface at [jhparmar.github.io/n8n-workflows](https://jhparmar.github.io/n8n-workflows)
 - **⚡ Performance**: 100x faster search with SQLite FTS5 integration
 - **🎨 Modern UI**: Completely redesigned interface with dark/light mode
 
@@ -31,7 +31,7 @@
 ## 🌐 Quick Access
 
 ### 🔥 Use Online (No Installation)
-Visit **[zie619.github.io/n8n-workflows](https://zie619.github.io/n8n-workflows)** for instant access to:
+Visit **[jhparmar.github.io/n8n-workflows](https://jhparmar.github.io/n8n-workflows)** for instant access to:
 - 🔍 **Smart Search** - Find workflows instantly
 - 📂 **15+ Categories** - Browse by use case
 - 📱 **Mobile Ready** - Works on any device

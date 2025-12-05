@@ -1,0 +1,137 @@
+﻿git : remote: error: 
+GH013: Repository rule 
+violations found for 
+refs/heads/main.        
+At line:1 char:1
++ git push -f origin main 
+2>&1 | Out-File -FilePath 
+"push_error2.txt" - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~
+    + CategoryInfo        
+      : NotSpecified: (r  
+  emote: error: ...s/ma   
+ in.        :String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+remote: 
+remote: - GITHUB PUSH 
+PROTECTION        
+remote:   ΓÇöΓÇöΓÇöΓÇöΓÇöΓ
+ÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇö
+ΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇ
+öΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓ
+ÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇö
+ΓÇö        
+remote:     Resolve the 
+following violations 
+before pushing again      
+  
+remote: 
+remote:     - Push cannot 
+contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn 
+how to resolve a blocked 
+push        
+remote:      https://docs.
+github.com/code-security/s
+ecret-scanning/working-wit
+h-secret-scanning-and-push
+-protection/working-with-p
+ush-protection-from-the-co
+mmand-line#resolving-a-blo
+cked-push        
+remote:             
+remote:      (?) This 
+repository does not have 
+Secret Scanning enabled, 
+but is eligible. Enable 
+Secret Scanning to view 
+and manage detected 
+secrets.        
+remote:      Visit the 
+repository settings page, 
+https://github.com/parmarj
+h/N8N-workflow-Documentati
+on/settings/security_analy
+sis        
+remote:             
+remote:             
+remote:       ΓÇöΓÇö 
+Perplexity API Key ΓÇöΓÇöΓ
+ÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇö
+ΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇ
+öΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓ
+ÇöΓÇöΓÇöΓÇö        
+remote:        locations: 
+       
+remote:          - 
+commit: a2ecf58a90987bfcaf
+94c636cf414709cb3bb5bc    
+    
+remote:            path: w
+orkflows/Code/1756_Code_HT
+TP_Automation_Webhook.json
+:49        
+remote:             
+remote:        (?) To 
+push, remove secret from 
+commit(s) or follow this 
+URL to allow the secret.  
+      
+remote:        https://git
+hub.com/parmarjh/N8N-workf
+low-Documentation/security
+/secret-scanning/unblock-s
+ecret/36QeJlB5SATFSpniGigp
+F37Cqwj        
+remote:             
+remote:             
+remote:       ΓÇöΓÇö 
+Apify API Token ΓÇöΓÇöΓÇöΓ
+ÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇö
+ΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇ
+öΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓÇöΓ
+ÇöΓÇöΓÇöΓÇöΓÇöΓÇö        
+remote:        locations: 
+       
+remote:          - 
+commit: a2ecf58a90987bfcaf
+94c636cf414709cb3bb5bc    
+    
+remote:            path: w
+orkflows/Http/1964_HTTP_Ag
+gregate_Automation_Webhook
+.json:366        
+remote:             
+remote:        (?) To 
+push, remove secret from 
+commit(s) or follow this 
+URL to allow the secret.  
+      
+remote:        https://git
+hub.com/parmarjh/N8N-workf
+low-Documentation/security
+/secret-scanning/unblock-s
+ecret/36QezUr0Jjw7PgNZ0Gyb
+PLtUcid        
+remote:             
+remote: 
+remote: 
+To https://github.com/parm
+arjh/N8N-workflow-Document
+ation.git
+ ! [remote rejected]   
+main -> main (push 
+declined due to 
+repository rule 
+violations)
+error: failed to push 
+some refs to 'https://gith
+ub.com/parmarjh/N8N-workfl
+ow-Documentation.git'
