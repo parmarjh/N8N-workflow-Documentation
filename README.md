@@ -94,7 +94,7 @@ python run.py
 ### 🐳 Docker Installation
 ```bash
 # Using Docker Hub
-docker run -p 8000:8000 zie619/n8n-workflows:latest
+docker run -p 8000:8000 parmarjh/N8N-workflow-Documentation:latest
 
 # Or build locally
 docker build -t N8N-workflow-Documentation .
@@ -177,7 +177,7 @@ We love contributions! Here's how you can help:
 ### Development Setup
 ```bash
 # Fork and clone
-git clone https://github.com/YOUR_USERNAME/n8n-workflows.git
+git clone https://github.com/parmarjh/N8N-workflow-Documentation.git
 
 # Create branch
 git checkout -b feature/amazing-feature
@@ -270,10 +270,11 @@ If you find this project helpful, please consider:
 
 ### ⭐ Star us on GitHub — it motivates us a lot!
 
-Made with ❤️ by [jatin parmar](https://github.com/Zie619) and [contributors](https://github.com/parmarjh/n8n-workflows/graphs/contributors)
+Made with ❤️ by [jatin parmar](https://github.com/parmarjh) and [contributors](https://github.com/parmarjh/N8N-workflow-Documentation/graphs/contributors)
 
 
 </div>
+
 
 
 
