@@ -11,7 +11,7 @@
 
 ### 🌟 The Ultimate Collection of n8n Automation Workflows
 
-**[🔍 Browse Online](https://parmarjh.github.io/n8n-workflows)** • **[📚 Documentation](#documentation)** • **[🤝 Contributing](#contributing)** • **[📄 License](#license)**
+**[🔍 Browse Online](https://parmarjh.github.io/N8N-workflow-Documentation)** • **[📚 Documentation](#documentation)** • **[🤝 Contributing](#contributing)** • **[📄 License](#license)**
 
 </div>
 
@@ -22,7 +22,7 @@
 ### 🎉 Latest Updates (November 2025)
 - **🔒 Enhanced Security**: Full security audit completed, all CVEs resolved
 - **🐳 Docker Support**: Multi-platform builds for linux/amd64 and linux/arm64
-- **📊 GitHub Pages**: Live searchable interface at [jhparmar.github.io/n8n-workflows](https://parmarjh.github.io/n8n-workflows)
+- **📊 GitHub Pages**: Live searchable interface at [jhparmar.github.io/n8n-workflows](https://parmarjh.github.io/N8N-workflow-Documentation/)
 - **⚡ Performance**: 100x faster search with SQLite FTS5 integration
 - **🎨 Modern UI**: Completely redesigned interface with dark/light mode
 
@@ -31,7 +31,7 @@
 ## 🌐 Quick Access
 
 ### 🔥 Use Online (No Installation)
-Visit **[jhparmar.github.io/n8n-workflows](https://parmarjh.github.io/n8n-workflows)** for instant access to:
+Visit **[jatin parmar n8n-workflows](https://parmarjh.github.io/N8N-workflow-Documentation/)** for instant access to:
 - 🔍 **Smart Search** - Find workflows instantly
 - 📂 **15+ Categories** - Browse by use case
 - 📱 **Mobile Ready** - Works on any device
@@ -168,8 +168,8 @@ n8n-workflows/
 We love contributions! Here's how you can help:
 
 ### Ways to Contribute
-- 🐛 **Report bugs** via [Issues](https://github.com/parmarjh/n8n-workflows/issues)
-- 💡 **Suggest features** in [Discussions](https://github.com/parmarjh/n8n-workflows/discussions)
+- 🐛 **Report bugs** via [Issues](https://parmarjh.github.io/N8N-workflow-Documentation//issues)
+- 💡 **Suggest features** in [Discussions](https://parmarjh.github.io/N8N-workflow-Documentation//discussions)
 - 📝 **Improve documentation**
 - 🔧 **Submit workflow fixes**
 - ⭐ **Star the repository**
@@ -207,7 +207,7 @@ git push origin feature/amazing-feature
 - ✅ **Regular security scanning**
 
 ### Reporting Security Issues
-Please report security vulnerabilities to the maintainers via [Security Advisory](https://github.com/parmarjh/n8n-workflows/security/advisories/new).
+Please report security vulnerabilities to the maintainers via [Security Advisory](https://parmarjh.github.io/N8N-workflow-Documentation//security/advisories/new).
 
 ---
 
@@ -245,7 +245,7 @@ If you find this project helpful, please consider:
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/parmarjh/n8n-workflows?style=social)
+![GitHub stars](https://img.shields.io/github/stars/parmarjh/n8n-workflow?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/parmarjh/workflows?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/parmarjh/n8n-workflows?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/parmarjh/n8n-workflows)
@@ -274,4 +274,5 @@ Made with ❤️ by [jatin parmar](https://github.com/Zie619) and [contributors]
 
 
 </div>
+
 
