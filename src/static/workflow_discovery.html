@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Discovery - Super Agent</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .desc {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .actions {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Discover n8n Workflows</h1>
+        <div class="search-bar">
+            <input type="text" id="query" placeholder="Search workflows (e.g., 'whatsapp', 'email automation')...">
+            <button onclick="search()">Search</button>
+        </div>
+
+        <div class="grid" id="results">
+            <!-- Results will appear here -->
+            <div class="card">
+                <h3>Example Workflow</h3>
+                <span class="tag">Productivity</span>
+                <p class="desc">An example workflow description showing how this card looks.</p>
+                <div class="actions">
+                    <a href="#">View Details</a>
+                    <button onclick="askAgent('Example Workflow')">Ask Agent</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function search() {
+            const query = document.getElementById('query').value;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Searching...</p>';
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: `Search online workflows for ${query}` })
+                });
+                const data = await response.json();
+                // In a real app, we'd parse the JSON response. 
+                // Since the agent returns text, we display it or parse it if structured.
+                // For this demo, we'll just show the raw text response in a card.
+                resultsDiv.innerHTML = `
+                    <div class="card" style="grid-column: 1 / -1;">
+                        <h3>Agent Response</h3>
+                        <p class="desc">${data.response.replace(/\n/g, '<br>')}</p>
+                    </div>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+
+        function askAgent(wfName) {
+            alert(`Asking agent about ${wfName}... (Feature coming soon)`);
+        }
+    </script>
+</body>
+
+</html>
