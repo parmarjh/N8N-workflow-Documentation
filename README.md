@@ -78,8 +78,8 @@ Visit **[jatin parmar n8n-workflows](https://parmarjh.github.io/N8N-workflow-Doc
 ### Quick Start
 ```bash
 # Clone the repository
-git clone https://github.com/Zie619/n8n-workflows.git
-cd n8n-workflows
+git clone https://github.com/parmarjh/N8N-workflow-Documentation.git
+cd N8N-workflow-Documentation
 
 # Install dependencies
 pip install -r requirements.txt
@@ -97,8 +97,8 @@ python run.py
 docker run -p 8000:8000 zie619/n8n-workflows:latest
 
 # Or build locally
-docker build -t n8n-workflows .
-docker run -p 8000:8000 n8n-workflows
+docker build -t N8N-workflow-Documentation .
+docker run -p 8000:8000 N8N-workflow-Documentation
 ```
 
 ---
@@ -274,5 +274,6 @@ Made with ❤️ by [jatin parmar](https://github.com/Zie619) and [contributors]
 
 
 </div>
+
 
 
